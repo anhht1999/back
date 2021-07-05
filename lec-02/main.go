@@ -5,8 +5,8 @@ import (
 	"io/ioutil"
 	"log"
 
-	"github.com/anhht1999/lec-02/algorithm"
-	"github.com/anhht1999/lec-02/file"
+	"github.com/anhht1999/back/lec-02/file"
+	"github.com/anhht1999/back/lec-02/algorithm"
 )
 
 
@@ -22,23 +22,23 @@ func main()  {
 
 	fmt.Println(text)
 
-	unSort := file.convertStringToInt(text)
+	unSort := file.ConvertStringToInt(text)
 	search := []int{3, 2}
 
-	min, max := file.findMinAndMax(unSort)
+	min, max := file.FindMinAndMax(unSort)
 	fmt.Println("Min: ", min)
 	fmt.Println("Max: ", max)
 
 	fmt.Println("Bubble Sorting:")
-	fmt.Println(algorithm.bubbleSort(unSort))
+	fmt.Println(algorithm.BubbleSort(unSort))
 	fmt.Println("Bubble Sorting:")
-	fmt.Println(algorithm.mergeSort(unSort))
+	fmt.Println(algorithm.MergeSort(unSort))
 	fmt.Println("Quick Sorting:")
-	fmt.Println(algorithm.quickSort(unSort, 0, len(unSort)-1))
+	fmt.Println(algorithm.QuickSort(unSort, 0, len(unSort)-1))
 	fmt.Println("Is Prime?:")
-	fmt.Println(file.isPrime(unSort))
+	fmt.Println(file.IsPrime(unSort))
 	fmt.Println("Check Number")
-	fmt.Println(file.checkNumber(search, unSort))
+	fmt.Println(file.CheckNumber(search, unSort))
 
-	file.avg(unSort)
+	file.Avg(unSort)
 }

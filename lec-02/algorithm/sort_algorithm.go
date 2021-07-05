@@ -1,7 +1,7 @@
 package algorithm
 
 //bubbleSort
-func bubbleSort(arr []int) []int {
+func BubbleSort(arr []int) []int {
 	for i := 0; i < len(arr)-1; i++ {
 		for j := 0; j < len(arr)-i-1; j++ {
 			if arr[j] > arr[j+1] {
@@ -35,21 +35,21 @@ func Merge(l, r []int) []int {
 	return arr
 }
 
-func mergeSort(arr []int) []int {
+func MergeSort(arr []int) []int {
 
 	if len(arr) <= 1 {
 		return arr
 	}
 
 	n := len(arr) / 2
-	l := mergeSort(arr[:n])
-	r := mergeSort(arr[n:])
+	l := MergeSort(arr[:n])
+	r := MergeSort(arr[n:])
 
 	return Merge(l, r)
 }
 
 //quickSort
-func partition(arr []int, low, high int) int {
+func Partition(arr []int, low, high int) int {
 
 	p := arr[high]
 
@@ -64,15 +64,15 @@ func partition(arr []int, low, high int) int {
 	return low
 }
 
-func quickSort(arr []int, low, high int) []int {
+func QuickSort(arr []int, low, high int) []int {
 
 	if low > high {
 		return arr
 	}
 
-	p := partition(arr, low, high)
-	quickSort(arr, low, p-1)
-	quickSort(arr, p+1, high)
+	p := Partition(arr, low, high)
+	QuickSort(arr, low, p-1)
+	QuickSort(arr, p+1, high)
 	return arr
 }
 

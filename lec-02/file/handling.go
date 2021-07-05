@@ -7,7 +7,7 @@ import (
 	"strings"
 )
 
-func checkPrimeNumber(num int) bool {
+func CheckPrimeNumber(num int) bool {
 
 	if num < 2 {
 		return false
@@ -21,17 +21,17 @@ func checkPrimeNumber(num int) bool {
 	return true
 }
 
-func isPrime(arr []int) []int {
+func IsPrime(arr []int) []int {
 	var prime []int
 	for i := 0; i < len(arr); i++ {
-		if checkPrimeNumber(arr[i]) {
+		if CheckPrimeNumber(arr[i]) {
 			prime = append(prime, arr[i])
 		}
 	}
 
 	return prime
 }
-func checkNumber(search []int, arr []int) []int {
+func CheckNumber(search []int, arr []int) []int {
 
 	var numberEsixt []int
 	for i := 0; i < len(arr); i++ {
@@ -45,7 +45,7 @@ func checkNumber(search []int, arr []int) []int {
 	return numberEsixt
 }
 
-func convertStringToInt(arr string) []int {
+func ConvertStringToInt(arr string) []int {
 
 	var arrConvert []int
 	text := strings.Split(arr, ",")
@@ -59,7 +59,7 @@ func convertStringToInt(arr string) []int {
 	return arrConvert
 }
 
-func findMinAndMax(a []int) (min int, max int) {
+func FindMinAndMax(a []int) (min int, max int) {
 	min = a[0]
 	max = a[0]
 	for _, value := range a {
@@ -73,7 +73,7 @@ func findMinAndMax(a []int) (min int, max int) {
 	return min, max
 }
 
-func avg(arr []int) {
+func Avg(arr []int) {
 	count := 0
 	for _, val := range arr {
 		count += val
