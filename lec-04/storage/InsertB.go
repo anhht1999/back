@@ -11,7 +11,6 @@ const (
 )
 
 func InsertData() {
-	//kết nối với database
 	db := connect.Connect()
 
 	//xóa bảng trong database nếu tồn tại

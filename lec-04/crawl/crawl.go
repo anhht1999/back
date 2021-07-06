@@ -20,7 +20,7 @@ func Crawl(link string) []model.Movie {
 		fmt.Println("Visiting", r.URL)
 	})
 
-	c.OnError(func(_ *colly.Response, err error) { //Handle error trong quá trình craw html
+	c.OnError(func(_ *colly.Response, err error) { 
 		log.Println("Something went wrong:", err)
 	})
 
