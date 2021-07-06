@@ -13,6 +13,7 @@ const (
 
 func Div(w http.ResponseWriter, req *http.Request) {
 	params := req.URL.Query()
+	
 	if div, ok := params[div]; ok {
 		fmt.Fprintf(w, "div %s", div[0])
 

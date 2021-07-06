@@ -13,7 +13,7 @@ const (
 
 func Multi(w http.ResponseWriter, req *http.Request) {
 	params := req.URL.Query()
-	// get "name" query
+
 	if multi, ok := params[multi]; ok {
 		fmt.Fprintf(w, "multi %s", multi[0])
 
@@ -26,7 +26,7 @@ func Multi(w http.ResponseWriter, req *http.Request) {
 			arrConvert = append(arrConvert, value)
 		}
 
-		fmt.Fprintf(w, "= %d", arrConvert[0] * arrConvert[1])
+		fmt.Fprintf(w, "= %d", arrConvert[0]*arrConvert[1])
 
 	} else {
 		fmt.Fprintln(w, `Hi guys. I don't know your name because you don't enter the your_name query param`)

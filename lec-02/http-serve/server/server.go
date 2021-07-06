@@ -21,6 +21,8 @@ func RunServer() {
 
 	http.HandleFunc("/div", handlers.Div)
 
+	http.HandleFunc("/", handlers.Handler)
+
 	if err := http.ListenAndServe(":8080", nil); err != nil {
 		panic("Error when running server")
 	}

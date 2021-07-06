@@ -23,7 +23,7 @@ func main()  {
 	fmt.Println(text)
 
 	unSort := file.ConvertStringToInt(text)
-	search := []int{3, 2}
+	search := []int{4,13}
 
 	min, max := file.FindMinAndMax(unSort)
 	fmt.Println("Min: ", min)
@@ -31,7 +31,7 @@ func main()  {
 
 	fmt.Println("Bubble Sorting:")
 	fmt.Println(algorithm.BubbleSort(unSort))
-	fmt.Println("Bubble Sorting:")
+	fmt.Println("Merge Sorting:")
 	fmt.Println(algorithm.MergeSort(unSort))
 	fmt.Println("Quick Sorting:")
 	fmt.Println(algorithm.QuickSort(unSort, 0, len(unSort)-1))

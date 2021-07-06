@@ -13,7 +13,7 @@ const (
 
 func Sum(w http.ResponseWriter, req *http.Request) {
 	params := req.URL.Query()
-	// get "name" query
+
 	if sum, ok := params[sum]; ok {
 		fmt.Fprintf(w, "sum %s", sum[0])
 
@@ -26,7 +26,7 @@ func Sum(w http.ResponseWriter, req *http.Request) {
 			arrConvert = append(arrConvert, value)
 		}
 
-		fmt.Fprintf(w, "= %d", arrConvert[0] + arrConvert[1])
+		fmt.Fprintf(w, "= %d", arrConvert[0]+arrConvert[1])
 
 	} else {
 		fmt.Fprintln(w, `Hi guys. I don't know your name because you don't enter the your_name query param`)

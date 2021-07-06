@@ -13,6 +13,7 @@ const (
 
 func Minus(w http.ResponseWriter, req *http.Request) {
 	params := req.URL.Query()
+	
 	if minus, ok := params[minus]; ok {
 		fmt.Fprintf(w, "minus %s", minus[0])
 
@@ -25,7 +26,7 @@ func Minus(w http.ResponseWriter, req *http.Request) {
 			arrConvert = append(arrConvert, value)
 		}
 
-		fmt.Fprintf(w, "= %d", arrConvert[0] - arrConvert[1])
+		fmt.Fprintf(w, "= %d", arrConvert[0]-arrConvert[1])
 
 	} else {
 		fmt.Fprintln(w, `Hi guys. I don't know your name because you don't enter the your_name query param`)
